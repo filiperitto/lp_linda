@@ -1,0 +1,52 @@
+//== Steps-1 Section ::::
+.moduleSteps{
+    .title{
+        margin: 0;
+    }
+    .step-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: flex-start;
+        icon{
+            width: 100%;
+            height: 104px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{}
+        }
+        h4{
+            width: 230px;
+            height: 63px;
+            font-family: Roboto Condensed;
+            font-size: 24px;
+            font-style: normal;
+            
+            margin: 22px 0;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: center;
+            text-transform: uppercase;
+            justify-content: center;
+            display: flex;
+        }
+        p{
+            font-family: Raleway;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #838383;
+
+        }
+        @include respond-to-min(750){
+            width: 33%;
+        }
+    }
+}
+//========== /Steps Section

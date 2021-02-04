@@ -1,0 +1,16 @@
+form{
+    input[type=text]{
+        background: #fff;
+        border-radius: 100px;
+        border: 2px solid #D6D7DB;
+        padding: 17px 25px;
+        font-family: $font-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        &:focus{
+            outline: none;
+        }
+    }
+}

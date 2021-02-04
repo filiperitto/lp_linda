@@ -1,0 +1,100 @@
+//== Hero Section ::::
+.graph-topo{
+    position: absolute;
+    top: -77px;
+    left: 47%;
+    transform: translate(-47%, 0);
+}
+.moduleHero {
+    width: 100%;
+    height: auto;
+    //float: left;
+    background: transparent;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 60px;
+    @include respond-to-min(750){
+        height: 700px;
+    }
+    @include respond-to-min(1200){
+        height: 80vh;
+    }
+    .wrap {
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        //flex-direction: column;
+        z-index: 1;
+        @include respond-to-min(750){
+            display: flex;
+        }
+
+    }
+    .text-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        @include respond-to-min(750){
+            justify-content: center;
+            width: 50%;
+        }
+        h1{
+            font-family: $font-regular;
+            font-size: 46px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $primary-light;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        }
+        p{
+            font-family: $font-regular;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $secondary-light;
+            
+        }
+        form{
+            width: 100%;
+            position: relative;
+            input[type=text]{
+                width: 100%;
+            }
+            .btn{
+                position: absolute;
+                top: 6px;
+                right: 6px;
+            }
+        }
+    }
+    .img-box{
+        width: 100%;
+        z-index: 0;
+        @include respond-to-min(750){
+            display: flex;
+            position: relative;
+            width: 50%;
+        }
+        img{
+            width: 100%;
+            @include respond-to-min(750){
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 170%;
+            }
+        }
+    }
+    
+}
+//========== /Hero Section
