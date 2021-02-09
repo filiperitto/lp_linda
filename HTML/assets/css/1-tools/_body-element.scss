@@ -117,6 +117,29 @@ section {
 
     }
 }
+
+
+
+.accordion{
+    .item{
+        border-bottom: 1px solid #C2C2C2;
+        .acc-heading{
+            display: block;
+            padding: 11px 22px;
+            &.active{
+                color: #FFAF19;
+            }
+        }
+        .acc-content{
+            margin: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            .inner{
+                padding: 0 22px 22px;
+            }
+        }
+    }
+}
 //========== /Section Defaut
 
 
@@ -245,8 +268,6 @@ a{
 h1, h2, h3, h4, h5, h6{
     color: #222;
     font-weight: bold;
-    display: flex;
-    justify-content: flex-start;
     icon{
         width: 20px;
         height: 20px;
