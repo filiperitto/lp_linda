@@ -1743,7 +1743,12 @@ form input[type=text]:focus {
   width: 100%;
   height: auto;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.moduleFaq .subtitle {
   margin-bottom: 60px;
+  font-size: 16px;
 }
 
 .moduleFaq .accordion {
@@ -1757,8 +1762,9 @@ form input[type=text]:focus {
       -ms-flex-align: center;
           align-items: center;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 109, 174, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 109, 174, 0.1);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin-bottom: 30px;
   padding: 40px;
   border: none;
@@ -1769,14 +1775,14 @@ form input[type=text]:focus {
 }
 
 .moduleFaq .accordion .acc-heading .header-acc {
-  font-family: Raleway;
-  font-size: 24px;
+  font-family: "Avenir LT 65", sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0em;
   text-align: left;
-  color: #222;
+  color: #34384A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1808,8 +1814,15 @@ form input[type=text]:focus {
 
 .moduleFaq .accordion .acc-heading .acc-content .inner p {
   margin: 20px 0;
-  color: #606060;
+  color: #7E8190;
   cursor: auto;
+  font-family: "Avenir LT 65", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .moduleFaq .btn-box {
