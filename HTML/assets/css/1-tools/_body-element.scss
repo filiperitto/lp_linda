@@ -58,7 +58,7 @@ textarea {
 
 body {
     font-size: 16px;
-    font-size: $font-regular;
+    font-family: $font-regular;
     overflow-x: hidden;
     background: #FBFBFD;
 }
@@ -87,7 +87,7 @@ section {
     outline: none;
 
     .title {
-        margin: 0 auto 45px;
+        margin: 0 auto 30px;
         display: flex;
         justify-content: center;
         font-family: $font-regular;
@@ -328,6 +328,7 @@ p{
     margin: 0 0 20px 0;
     line-height: 1.9;
     font-weight: 500;
+    color: $secondary-light;
 }
 
 em{

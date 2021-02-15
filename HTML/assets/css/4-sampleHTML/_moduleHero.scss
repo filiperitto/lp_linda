@@ -41,6 +41,7 @@
         @include respond-to-min(750){
             justify-content: center;
             width: 50%;
+            align-items: baseline;
         }
         h1{
             font-family: $font-regular;
@@ -64,20 +65,8 @@
             color: $secondary-light;
             
         }
-        form{
-            width: 100%;
-            position: relative;
-            input[type=text]{
-                width: 100%;
-            }
-            .btn{
-                position: absolute;
-                top: 6px;
-                right: 6px;
-                .border-wrap {
-                    padding: 15px 18px;
-                }
-            }
+        .btn{
+            margin: 10px 0 30px;
         }
     }
     .img-box{

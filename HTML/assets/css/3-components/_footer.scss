@@ -31,8 +31,12 @@ footer{
             flex-wrap: wrap;
             @include respond-to-min(750){
                 width: 100%;
-                padding-right: 30px;
+                //padding-right: 30px;
                 padding-bottom: 0px;
+            }
+            .col50{
+                display: flex;
+                align-items: center;
             }
             h2{
                 color: #fff;
@@ -89,23 +93,14 @@ footer{
                 font-weight: 400;
                 
             }
-            .soci{
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                a{
-                    padding: 5px 5px 5px 0;
-                    display: block;
-                    margin-right: 15px;
-                }
-            }
         }
         .menu-box{
             .info-box{
                 padding-left: 0;
+                width: 100%;
+                @include respond-to-min(750){
+                    width: 50%;
+                }
                 h1{
                     font-family: $font-regular;
                     color: $primary-dark;
@@ -132,6 +127,45 @@ footer{
                         text-align: left;
     
     
+                    }
+                }
+            }
+            .nav-footer-box{
+                width: 100%;
+                @include respond-to-min(750){
+                    width: 50%;
+                }
+                .nav-footer{
+                    width: 100%;
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0;
+                        li{
+                            font-size: 16px;
+                            line-height: 32px;
+                            /* identical to box height, or 200% */
+                            
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+                            a{
+                                color: $primary-dark;
+                            }
+                        }
+                    }
+                }
+                .soci{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    a{
+                        padding: 5px 5px 5px 0;
+                        display: block;
+                        margin-right: 15px;
                     }
                 }
             }

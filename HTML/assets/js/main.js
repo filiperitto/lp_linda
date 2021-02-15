@@ -34,6 +34,15 @@
 
 })();
 //------------------------ Header
+
+//== Slider Card moduleCards-1
+new Glider(document.querySelector('.cards-glider'), {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: '#dots-cards'
+});
+//======================== /Slider Card moduleCards-1
+
 //== Accordion Module
 (function(){
     let accTitle = document.getElementsByClassName("acc-heading");
