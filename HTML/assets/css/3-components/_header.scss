@@ -21,12 +21,12 @@ header {
     }
 
     nav {
-        width: 100%;
+        width: 90%;
         height: 100%;
         position: fixed;
         top: 0;
         right: -100%;
-        background: #606060;
+        background: #fff;
         transition: all .3s ease-in-out;
         @include respond-to-min(750){
             width: auto;
@@ -46,6 +46,7 @@ header {
             display: flex;
             margin: 80px 0 0 0;
             padding: 0;
+            align-items: baseline;
 
             @include respond-to-min(750){
                 align-content: space-between;
@@ -55,14 +56,35 @@ header {
             }
 
             li {
-                margin-left: 40px;
+                width: 100%;
+                @include respond-to-min(750){
+                    width: auto;
+                    padding-left: 40px;
+                }
 
                 a {
                     font-family: $font-regular;
                     color: $primary-light;
                     font-weight: 600;
+                    display: block;
+                    padding: 15px 0px;
+                    padding-left: 40px;
+                    @include respond-to-min(750){
+                        padding: 0;
+                    }
+                    &:hover{
+                        background-color: rgba($primary-light, 0.1);
+                        @include respond-to-min(750){
+                            background-color: transparent;
+                        }
+                    }
                 }
                 .btn.inverted{
+                    margin-left: 40px;
+                    margin-top: 40px;
+                    @include respond-to-min(750){
+                        margin: 0;
+                    }
                     .border-wrap{
                         padding: 12px 40px;
                         background-color: #fff3f3 ;
@@ -84,6 +106,9 @@ header {
                 li {
                     a {
                         color: #303030;
+                    }
+                    .btn.inverted .border-wrap{
+                        background-color: #fff;
                     }
                 }
             }

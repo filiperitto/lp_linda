@@ -35,11 +35,74 @@
 })();
 //------------------------ Header
 
+//-== HamburgerMenu Toggle
+(function(){
+    function hamburgueToggle() {
+        document.getElementById('hamb').classList.toggle('open');
+        document.getElementById('header-main').classList.toggle('open');
+    }
+    
+    // Select all the elements with example class.
+    var hambComponent = document.querySelectorAll('.hamb');
+    var itemNavComponent = document.querySelectorAll('.itemNav');
+    
+    // Loop through the elements.
+    for (var i = 0; i < hambComponent.length; i++) {
+        hambComponent[i].addEventListener('click', hamburgueToggle);
+    }
+    for (var i = 0; i < itemNavComponent.length; i++) {
+        itemNavComponent[i].addEventListener('click', hamburgueToggle);
+    }
+})();
+//======================== /HamburgerMenu Toggle
+
+
+//== Anchor Scrollsmooth
+// Vanilla JavaScript Scroll to Anchor @ https://perishablepress.com/vanilla-javascript-scroll-anchor/
+(function() {
+    
+    function scrollTo() {
+        const links = document.querySelectorAll('.menu-item a');
+        links.forEach(each => (each.onclick = scrollAnchors));
+    }
+
+    function scrollAnchors(e, respond = null) {
+        const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+        e.preventDefault();
+        var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+        const targetAnchor = document.querySelector(targetID);
+        if (!targetAnchor) return;
+        const originalTop = distanceToTop(targetAnchor);
+        window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+        const checkIfDone = setInterval(function() {
+            const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+            if (distanceToTop(targetAnchor) === 0 || atBottom) {
+                targetAnchor.tabIndex = '-1';
+                targetAnchor.focus();
+                window.history.pushState('', '', targetID);
+                clearInterval(checkIfDone);
+            }
+        }, 150);
+    }
+
+	scrollTo();
+})();
+
+//======================== /Anchor Scrollsmooth
+
 //== Slider Card moduleCards-1
 new Glider(document.querySelector('.cards-glider'), {
-    slidesToShow: 3,
+    
+    slidesToShow: 1,
     slidesToScroll: 1,
-    dots: '#dots-cards'
+    dots: '#dots-cards',
+    responsive: [{
+        breakpoint: 750,
+        settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 3
+        }
+    }]
 });
 //======================== /Slider Card moduleCards-1
 

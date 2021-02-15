@@ -1103,12 +1103,12 @@ header .logo {
 }
 
 header nav {
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: fixed;
   top: 0;
   right: -100%;
-  background: #606060;
+  background: #fff;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -1143,6 +1143,9 @@ header nav ul {
   display: flex;
   margin: 80px 0 0 0;
   padding: 0;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 @media only screen and (min-width: 750px) {
@@ -1161,13 +1164,50 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-left: 40px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+  header nav ul li {
+    width: auto;
+    padding-left: 40px;
+  }
 }
 
 header nav ul li a {
   font-family: "Avenir LT 65", sans-serif;
   color: #34384A;
   font-weight: 600;
+  display: block;
+  padding: 15px 0px;
+  padding-left: 40px;
+}
+
+@media only screen and (min-width: 750px) {
+  header nav ul li a {
+    padding: 0;
+  }
+}
+
+header nav ul li a:hover {
+  background-color: rgba(52, 56, 74, 0.1);
+}
+
+@media only screen and (min-width: 750px) {
+  header nav ul li a:hover {
+    background-color: transparent;
+  }
+}
+
+header nav ul li .btn.inverted {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 750px) {
+  header nav ul li .btn.inverted {
+    margin: 0;
+  }
 }
 
 header nav ul li .btn.inverted .border-wrap {
@@ -1185,6 +1225,10 @@ header.fixed-top .logo {
 
 header.fixed-top nav ul li a {
   color: #303030;
+}
+
+header.fixed-top nav ul li .btn.inverted .border-wrap {
+  background-color: #fff;
 }
 
 header.fixed-top .hamb span {
@@ -1280,7 +1324,7 @@ MENU HAMBUGER ANIMATION
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #fff;
+  background: #34384A;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -1478,6 +1522,7 @@ footer .footer-container .text-box hr {
     width: 110%;
     border: solid #fff;
     border-width: 2px 0 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1494,6 +1539,10 @@ footer .footer-container .text-box p {
   color: #fff;
   font-family: 'DM Sans';
   font-weight: 400;
+}
+
+footer .footer-container .menu-box {
+  padding: 40px 0;
 }
 
 footer .footer-container .menu-box .info-box {
