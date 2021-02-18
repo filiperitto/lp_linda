@@ -1,0 +1,73 @@
+//== Feature Section ::::
+.moduleFeature {
+    //background: #FBFBFD;
+    z-index: 2;
+    position: relative;
+    @include respond-to-min(750){
+        //padding-bottom: 225px;
+    }
+    .box-cont{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include respond-to-min(750){
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+    }
+    .img-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include respond-to-min(750){
+            width: 30%;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            max-width: 310px;
+        }
+    }
+    .text-box{
+        width: 100%;
+        order: 1;
+        //margin-bottom: 40px;
+        //padding-top: 230px;
+        padding-bottom: 80px;
+        @include respond-to-min(750){
+            width: 70%;
+            padding: 0 70px;
+            order: 2;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            //padding-top: 230px;
+        }
+        h1{
+            display: inline-block;
+            margin-top: 0;
+            color: $primary-light;
+            font-family: $font-regular;
+            font-weight: 600;
+            font-size: 30px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+        }
+        p{
+            color: $primary-light;
+            font-weight: 500;
+            line-height: 140%;
+        }
+    }
+    .div-feature{
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+//========== /Feature Section

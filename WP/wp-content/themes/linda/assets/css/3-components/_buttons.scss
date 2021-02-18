@@ -1,0 +1,44 @@
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: $font-regular;
+    color: $white;
+    background: $btn-active;
+    border-radius: 27px;
+    padding: 2px;
+    display: table;
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    &:hover{
+        color: $primary-light;
+        .border-wrap{
+            background: #fff;
+        }
+    }
+    .border-wrap{
+        padding: 10px 18px;
+        border-radius: 27px;
+        background: $btn-active;
+        transition: background .2s ease-in-out;
+    }
+
+    &.inverted{
+        color: $primary-light;
+        .border-wrap{
+            background: #fff;
+        }
+        &:hover{
+            color: $white;
+            .border-wrap{
+                background: $btn-active;
+            }
+        }
+    }
+    &:active{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+}
