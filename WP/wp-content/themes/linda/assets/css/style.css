@@ -667,10 +667,6 @@ section .subtitle {
   margin: auto;
 }
 
-.accordion .item {
-  border-bottom: 1px solid #C2C2C2;
-}
-
 .accordion .item .acc-heading {
   display: block;
   padding: 11px 22px;
@@ -2655,30 +2651,36 @@ footer .copy-box ul li a {
   font-size: 16px;
 }
 
+.moduleFaq .accordion .acc-heading svg {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.moduleFaq .accordion .acc-heading .acc-content .inner {
+  padding: 0;
+}
+
+.moduleFaq .accordion .acc-heading .acc-content .inner p {
+  margin: 20px 0;
+}
+
 .moduleFaq .accordion {
   width: 100%;
   max-width: 970px;
   margin: auto;
 }
 
-.moduleFaq .accordion .acc-heading {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.moduleFaq .accordion .item {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 40px;
-  border: none;
-  display: block;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  cursor: default;
 }
 
-.moduleFaq .accordion .acc-heading .header-acc {
+.moduleFaq .accordion .item .acc-heading {
+  display: block;
   font-family: "Avenir LT 65", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -2693,34 +2695,43 @@ footer .copy-box ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
+  padding: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
-.moduleFaq .accordion .acc-heading svg {
+.moduleFaq .accordion .item .acc-heading svg {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
-.moduleFaq .accordion .acc-heading.active {
-  -webkit-box-shadow: 0px 15px 60px rgba(0, 109, 174, 0.1);
-          box-shadow: 0px 15px 60px rgba(0, 109, 174, 0.1);
-  margin-bottom: 35px;
+.moduleFaq .accordion .item .acc-heading.active {
+  margin-bottom: 25px;
 }
 
-.moduleFaq .accordion .acc-heading.active svg {
+.moduleFaq .accordion .item .acc-heading.active svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.moduleFaq .accordion .acc-heading .acc-content .inner {
+.moduleFaq .accordion .item .acc-content {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.moduleFaq .accordion .item .acc-content .inner {
   padding: 0;
 }
 
-.moduleFaq .accordion .acc-heading .acc-content .inner p {
-  margin: 20px 0;
+.moduleFaq .accordion .item .acc-content .inner p {
+  margin-bottom: 0;
   color: #7E8190;
   cursor: auto;
   font-family: "Avenir LT 65", sans-serif;
@@ -2730,6 +2741,10 @@ footer .copy-box ul li a {
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.moduleFaq .accordion .item .acc-content .inner p a:hover {
+  text-decoration: underline;
 }
 
 .moduleFaq .btn-box {

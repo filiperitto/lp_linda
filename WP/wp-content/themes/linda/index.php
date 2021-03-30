@@ -282,10 +282,9 @@
 
                     <?php if(get_field('faq', 'option')): $i = 0; ?>
                     <?php while(has_sub_field('faq', 'option')): $i++; ?>
-                    
 
-                    <a href="#acc<?php echo $i; ?>" class="acc-heading item">
-                        <div class="header-acc">
+                    <div class="item">
+                        <a href="#acc<?php echo $i; ?>"  class="header-acc acc-heading ">
                             <span><?php the_sub_field('pergunta'); ?></span>
                             <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 2L12.08 12.08L22.16 2" stroke="url(#paint0_linear)" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round"/>
@@ -296,16 +295,15 @@
                                 </linearGradient>
                                 </defs>
                             </svg>
-                        </div>
+                        </a>
 
                         <div id="acc<?php echo $i; ?>" class="acc-content">
                             <div class="inner">
-                                <p>
                                 <?php the_sub_field('resposta'); ?>
-                                </p>
                             </div><!-- / .inner -->
                         </div>
-                    </a><!-- / .item -->
+                    </div><!-- / .item -->
+
 
                     <?php endwhile; ?>
                     <?php endif; ?>
