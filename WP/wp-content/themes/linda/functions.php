@@ -29,6 +29,7 @@ function custom_formats() {
     wp_register_style('style', PW_THEME_URL . 'assets/css/style.css', null, null, 'all');
 
     wp_register_script('glider', 'https://cdn.jsdelivr.net/npm/glider-js@1/glider.js', null, null, true); 
+    wp_register_script('glight', PW_THEME_URL . 'assets/js/glightbox.min.js', null, null, true);
     wp_register_script('main', PW_THEME_URL . 'assets/js/main.js', null, null, true);
 
 
@@ -36,6 +37,7 @@ function custom_formats() {
 
 
     wp_enqueue_script('glider');
+    wp_enqueue_script('glight');
     wp_enqueue_script('main');
     
 

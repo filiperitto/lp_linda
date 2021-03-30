@@ -7,7 +7,7 @@
 
             <div class="footer-container">
                 <div class="wrap grid">
-                    <div class="text-box">
+                    <div class="text-box" style="display:<?php the_field('newsletter_visivel', 'option'); ?>;">
                         <div class="col50">
                             <h2>Faça parte da nossa newsletter!</h2>
                         </div>
@@ -25,8 +25,8 @@
                         <div class="info-box">
                             <h1>Contato</h1>
                             <ul class="list">
-                                <li><?php the_field('email_para_contato', 'option'); ?></li>
-                                <li><?php the_field('telefone_para_contato', 'option'); ?></li>
+                                <li><a href="mailto:<?php the_field('email_para_contato', 'option'); ?>"><?php the_field('email_para_contato', 'option'); ?></a></li>
+                                <li style="display:<?php the_field('telefone', 'option'); ?>"><?php the_field('telefone_para_contato', 'option'); ?></li>
                             </ul>
                         </div>
 
@@ -34,23 +34,23 @@
                             <div class="nav-footer">
                                 <ul>
                                     <li class="menu-item"><a href="#como-funciona">Como Funciona?</a></li>
-                                    <li class="menu-item"><a href="#depoimentos">Depoimentos</a></li>
+                                    <li class="menu-item" style="display:<?php the_field('sessao-testemonial', 'option'); ?>;"><a href="#depoimentos">Depoimentos</a></li>
                                     <li class="menu-item"><a href="#faq">FAQ</a></li>
                                 </ul>
                             </div>
                             
                         <ul class="soci">
-                            <li>
-                                <?php if(get_field('redes_sociais', 'option')): $i = 0; ?>
-                                <?php while(has_sub_field('redes_sociais', 'option')): $i++; ?>
+                            <?php if(get_field('redes_sociais', 'option')): $i = 0; ?>
+                            <?php while(has_sub_field('redes_sociais', 'option')): $i++; ?>
+                            <li style="display: <?php the_sub_field('twitter_visivel'); ?>;">
                                 <a href="<?php the_sub_field('twitter'); ?>">
                                     <svg width="25" height="25" viewBox="0 0 35 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M34.2222 4.28931C32.9496 4.84756 31.5935 5.21759 30.1797 5.39725C31.6342 4.52886 32.7442 3.16425 33.2661 1.51945C31.9101 2.32795 30.4129 2.89903 28.8172 3.21773C27.5296 1.8467 25.6945 0.997559 23.6925 0.997559C19.8082 0.997559 16.6812 4.15028 16.6812 8.01525C16.6812 8.57137 16.7283 9.10609 16.8438 9.61514C11.011 9.33067 5.84986 6.53514 2.38272 2.27661C1.77742 3.32681 1.42236 4.52886 1.42236 5.82289C1.42236 8.25267 2.67361 10.4065 4.53872 11.6535C3.41153 11.6321 2.30572 11.3049 1.36889 10.7894C1.36889 10.8108 1.36889 10.8386 1.36889 10.8664C1.36889 14.2758 3.80081 17.1077 6.98989 17.76C6.41881 17.9162 5.79639 17.991 5.15044 17.991C4.70128 17.991 4.24783 17.9654 3.82219 17.8713C4.73122 20.6497 7.31072 22.6923 10.3779 22.7586C7.99089 24.6259 4.96008 25.7509 1.67903 25.7509C1.10367 25.7509 0.551833 25.7253 0 25.6547C3.10781 27.6588 6.79097 28.8031 10.7629 28.8031C23.6732 28.8031 30.7316 18.1087 30.7316 8.83873C30.7316 8.52859 30.7209 8.22914 30.7059 7.93184C32.0983 6.94367 33.2683 5.70953 34.2222 4.28931Z" fill="white"/>
                                     </svg>
                                 </a>
-                                <?php endwhile; ?>
-                                <?php endif; ?>
                             </li>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
                             <li>
                                 <?php if(get_field('redes_sociais', 'option')): $i = 0; ?>
                                 <?php while(has_sub_field('redes_sociais', 'option')): $i++; ?>
@@ -86,8 +86,8 @@
                     <p>Linda © Copyright 2020 - Todos os direitos reservados.</p>
 
                     <ul>
-                        <li><a href="javascript:void(0)">Politica de Privacidade</a></li>
-                        <li><a href="javascript:void(0)">Termos e Condições</a></li>
+                        <li><a href="<?php echo PW_URL; ?>/privacidade">Politica de Privacidade</a></li>
+                        <li><a href="<?php echo PW_URL; ?>/termodeuso">Termos e Condições</a></li>
                     </ul>
                 </div>
             </div>

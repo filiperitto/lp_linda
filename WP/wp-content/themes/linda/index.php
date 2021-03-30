@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNG4Q9M"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="main">
+    
         <svg class="graph-topo" width="2560" height="1035" viewBox="0 0 2560 1035" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="2560" height="1035">
             <rect width="2560" height="1035" fill="white"/>
@@ -13,13 +19,17 @@
         </svg>
         <?php get_template_part('inc/nav');?>
 
+        <?php get_template_part('inc/modal');?>
+
+        
+
         <section id="hero" class="moduleHero">
             <div class="wrap">
                 <div class="text-box">
 
                     <?php the_field('intro_text', 'option'); ?>
 
-                    <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn"><div class="border-wrap">Baixe agora grátis!</div></a>
+                    <a href="javascript:(0)" class="btn modalcta"><div class="border-wrap">Baixe agora grátis!</div></a>
                     
                     <div class="box-btns">
                         <?php if(get_field('url_stores', 'option')): $i = 0; ?>
@@ -51,7 +61,7 @@
                         <?php the_field('infos_feature1', 'option'); ?>
                     </p>
                     
-                    <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn"><div class="border-wrap">Quero baixar agora grátis!</div></a>
+                    <a href="javascript:(0)" class="btn modalcta"><div class="border-wrap">Quero baixar agora grátis!</div></a>
                     
                 </div>
                     
@@ -107,7 +117,7 @@
             <?php endwhile; ?>
             <?php endif; ?>
             </div>
-            <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn"><div class="border-wrap">Baixe agora grátis!</div></a>
+            <a href="javascript:(0)" class="btn modalcta"><div class="border-wrap">Baixe agora grátis!</div></a>
 
         </section>
 
@@ -165,7 +175,7 @@
                     <?php endwhile; ?>
                     <?php endif; ?>
 
-                    <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn"><div class="border-wrap">Adore! Quero baixar agora grátis!</div></a>
+                    <a href="javascript:(0)" class="btn modalcta"><div class="border-wrap">Adorei! Quero baixar agora grátis!</div></a>
 
                     <div class="box-btns">
                     
@@ -188,7 +198,7 @@
             </svg>
         </section>
 
-        <section id="depoimentos" class="moduleReviews">
+        <section id="depoimentos" class="moduleReviews" style="display:<?php the_field('sessao-testemonial', 'option'); ?>;">
             <h1 class="title"><?php the_field('titulo_testemonials', 'option'); ?></h1>
             <p class="subtitle"><?php the_field('intro_testemonials', 'option'); ?></p>
             <div class="wrap grid box-cont">
@@ -215,7 +225,7 @@
                 </div>
                 <div id="dots-cards" class="dots-cards"></div>
             </div>
-            <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn">
+            <a href="javascript:(0)" class="btn modalcta">
                 <div class="border-wrap">Baixe agora grátis!</div>
             </a>
         </section>
@@ -303,7 +313,7 @@
                 </div><!-- / .accordion -->
 
                 <div class="btn-box">
-                    <a href="<?php the_field('url_ctas', 'option'); ?>" class="btn"><div class="border-wrap">Baixe aqui!</div></a>
+                    <a href="javascript:(0)" class="btn modalcta"><div class="border-wrap">Baixe aqui!</div></a>
                 </div>
             </div>
         </section> <!-- /Faq -->
